@@ -5,7 +5,7 @@ let projectElement = document.querySelector("#project");
 
 // ===== About Section - Read More/Less Functionality =====
 document.addEventListener("DOMContentLoaded", () => {
-  // Set current year in footer
+  // Set current year in footer section
   document.getElementById("year").textContent = new Date().getFullYear();
 
   readMoreButton = document.querySelector(".read-more");
