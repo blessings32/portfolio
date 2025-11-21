@@ -1,0 +1,169 @@
+let readMoreButton;
+let aboutImage;
+let projectElement = document.querySelector("#project");
+document.addEventListener("DOMContentLoaded", () => {
+  readMoreButton = document.querySelector(".read-more");
+  aboutImage = document.querySelector(".about-image");
+  readMoreButton.addEventListener("click", () => {
+    aboutImage.style.display = "none";
+    let font = "18px";
+    document.querySelector(".para0").style.width = "80%";
+    document.querySelector(".para1").style.width = "80%";
+    document.querySelector(".para2").style.width = "80%";
+    document.querySelector(".para1").style.display = "block";
+    document.querySelector(".para2").style.display = "block";
+    document.querySelector(".para0").style.fontSize = font;
+    document.querySelector(".para1").style.fontSize = font;
+    document.querySelector(".para2").style.fontSize = font;
+    readMoreButton.style.display = "none";
+  });
+  document.querySelector(".show-less").addEventListener("click", () => {
+    aboutImage.style.display = "";
+    document.querySelector(".para0").style.width = "";
+    document.querySelector(".para1").style.display = "";
+    document.querySelector(".para2").style.display = "";
+    readMoreButton.style.display = "";
+  });
+});
+
+let mode = 0; //0 =>  visible, 1 => not visible
+function projectContainerVisibility(state) {
+  let projectContainer = document.querySelector(".project-container");
+  try {
+    if (state == 0) {
+      projectContainer.style.display = "none";
+      mode = 1;
+    } else if (state == 1) {
+      mode = 0;
+      projectContainer.style.display = "";
+    }
+  } catch {
+    return;
+  }
+}
+projectElement.addEventListener("click", (el) => {
+  let element = el.target;
+  if (element.matches(".project-see-more")) {
+    let target = element.closest(".project-see-more");
+    let data = target.dataset.project;
+    projectContainerVisibility(mode);
+    projecter(data);
+  } else if (element.matches(".project-see-less")) {
+    let target = element.closest(".project-see-less");
+    let data = target.dataset.project;
+    projectContainerVisibility(mode);
+    projecter(data, "hide");
+  }
+});
+
+function projecter(project, purpose = "view") {
+  el = document.querySelector(`.${project}`);
+  if (purpose == "view") {
+    el.style.display = "block";
+  } else if (purpose == "hide") {
+    el.style.display = "none";
+  }
+}
+
+function formHandler() {
+  const responseMessage = document.getElementById("form-feedback");
+  const form = document.forms.contact;
+  const username = form.username.value;
+  const phonenumber = form.phone.value || "N/A";
+  const email = form.email.value;
+  const subject = form.subject.value;
+  const message = form.message.value;
+  responseMessage.textContent = "sending...";
+  const data = {
+    name: username,
+    phone: phonenumber,
+    email: email,
+    subject: subject,
+    message: message,
+  };
+  console.log(data);
+  try {
+    const response = fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const data = response.json();
+
+    if (response.ok) {
+      responseMessage.textContent = "Thank you! your message has been sent";
+      form.reset();
+    } else {
+      responseMessage.textContent = "Something went wrong.'";
+    }
+  } catch (err) {
+    responseMessage.textContent = " A network error occured. please try again.";
+  }
+}
+
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("show");
+//         //observer.unobserve(entry.target);
+//       }
+//     });
+//   },
+//   { threshold: 0.05 }
+// );
+
+// document.querySelectorAll(".animate").forEach((el) => {
+//   observer.observe(el);
+// });
+
+(function () {
+  function createObserver() {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.06,
+        rootMargin: "0px 0px -5% 0px",
+      }
+    );
+
+    return observer;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = createObserver();
+
+    document.querySelectorAll(".animate").forEach((el) => observer.observe(el));
+
+    const mo = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        for (const node of m.addedNodes) {
+          if (!(node instanceof HTMLElement)) continue;
+          if (node.matches && node.matches(".animate")) observer.observe(node);
+          node.querySelectorAll &&
+            node
+              .querySelectorAll(".animate")
+              .forEach((el) => observer.observe(el));
+        }
+      }
+    });
+
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    setTimeout(() => {
+      document
+        .querySelectorAll(".animate:not(.show)")
+        .forEach((el) => el.classList.add("show"));
+    }, 6000);
+  });
+})();

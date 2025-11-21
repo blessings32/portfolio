@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.7.2-web/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="./main.js" defer></script>
+    <title>Blessings Chaleka — Portfolio</title>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="#home" class="name">BLESSINGS</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="home" aria-label="Home section">
+        <div class="cont animate slide-left">
+          <p>
+            Hi I'm<br />
+            <span class="bold">Blessings Chaleka.</span><br />
+            Energy Engineering Student at Malawi University of Science and
+            Technology.
+          </p>
+
+          <div class="social-media-links">
+            <a title="linkedin" href="#r" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a title="instagram" href="#r" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a title="facebook" href="#r" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+
+          <a class="see" href="#about">See More &gt;</a>
+        </div>
+
+        <figure class="image animate slide-left" aria-hidden="false">
+          <img alt="my photo" src="./IMG-20250120-WA0032.jpg" />
+        </figure>
+      </section>
+
+      <section id="about" aria-label="About section">
+        <div class="image2 animate slide-left">
+          <img
+            class="about-image"
+            alt="my photo"
+            src="./IMG-20250120-WA0032.jpg"
+          />
+        </div>
+
+        <div class="para animate slide-left">
+          <h2>About <span class="me">Me</span></h2>
+
+          <p class="para0">
+            I'm an Energy Engineering student specializing in
+            <a class="me" href="#">Sustainable Energy Engineering</a>, focused
+            on building practical solutions for a cleaner and more efficient
+            energy future. My work combines technical knowledge with creativity
+            &mdash; from designing energy systems to developing software tools
+            that bring data and design together.
+          </p>
+
+          <p class="para1">
+            Alongside my studies, I'm a self taught programmer experienced in
+            <em>web development (HTML, CSS, JavaScript, Node.js)</em>,
+            <em>database (MySQL, InfluxDB)</em> and
+            <em>embedded systems</em> using <em>Arduino.</em>
+            I enjoy developing projects that bridge gap between hardware and
+            software, such as sensor-based automation systems and smart energy
+            applications.
+          </p>
+
+          <p class="para2">
+            I'm also exploring areas like
+            <em>data visualization and IoT integration</em>, aiming to apply
+            technology to real-world sustainability challenges. My long-term
+            goal is to contribute to
+            <em>renewable energy innovation and sustainable infrastructure</em>
+            in Africa.
+          </p>
+
+          <div class="about-controls">
+            <button class="read-more">Read More &gt;</button>
+            <button type="button" class="show-less">Show less</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="project" aria-label="Projects">
+        <h1 class="h1-project animate slide-left">Project</h1>
+
+        <div class="project-container">
+          <article class="image-container animate slide-left">
+            <img alt="smart home system" src="./photos/h1.jpg" />
+            <div class="overley-text">
+              <h3>SMART HOME</h3>
+              <p>
+                A smart home system using RFID for automatic door access and a
+                photoresistor to switch on security at night and off during the
+                day.
+              </p>
+              <button
+                data-project="smart-home"
+                title="see more"
+                type="button"
+                class="project-see-more"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="image-container animate slide-left">
+            <img alt="environment monitor" src="./photos/e.jpg" />
+            <div class="overley-text">
+              <h3>Environmental Monitoring System</h3>
+              <p>
+                Uses a DHT sensor to display real-time temperature and humidity
+                on an LCD and triggers a buzzer when temperature exceeds
+                37&deg;C.
+              </p>
+              <button
+                data-project="environmental"
+                title="see more"
+                type="button"
+                class="project-see-more"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="image-container animate slide-left">
+            <img alt="music play" src="./photos/mu.jpg" />
+            <div class="overley-text">
+              <h3>2-Octave Keypad synth</h3>
+              <p>
+                A 4x4 keypad lets you play two full octaves of musical notes
+                through a buzzer.
+              </p>
+              <button
+                data-project="octave"
+                title="see more"
+                type="button"
+                class="project-see-more"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="image-container animate slide-left">
+            <img
+              src="./photos/Screenshot 2025-06-08 220410.png"
+              alt="music streaming app"
+            />
+            <div class="overley-text">
+              <h3>Music Streaming Web App</h3>
+              <p>
+                A web application that allows users to sign up, log in, and
+                browse songs, artists, and albums.
+              </p>
+              <button
+                data-project="web-streaming"
+                title="see more"
+                type="button"
+                class="project-see-more"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="description">
+          <div class="smart-home animate">
+            <h3 class="h3">Smart Home System</h3>
+            <p class="des animate slide-left">
+              This project is a comprehensive home automation system designed to
+              improve security, convenience, and energy efficiency. It uses
+              <abbr title="Radio-Frequency Identification">RFID</abbr> to
+              automatically unlock doors for authorized tags and integrates a
+              photoresistor to switch lights based on ambient light.
+            </p>
+            <p class="des animate slide-left">
+              Built on an Arduino platform, the project demonstrates hands-on
+              experience in programming, sensor interfacing, and embedded system
+              design.
+            </p>
+            <button
+              data-project="smart-home"
+              title="see more"
+              type="button"
+              class="project-see-less"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+
+          <div class="environmental animate">
+            <h3 class="h3">Environmental Monitoring system</h3>
+            <p class="des animate slide-left">
+              This Arduino-based environmental monitoring system provides
+              continuous real-time monitoring of temperature and humidity,
+              useful for healthcare environments.
+            </p>
+            <p class="des animate slide-left">
+              It uses a DHT11 sensor and displays data on an I2C LCD; a buzzer
+              alerts when temperature crosses 37&deg;C.
+            </p>
+            <button
+              data-project="environmental"
+              title="see more"
+              type="button"
+              class="project-see-less"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+
+          <div class="octave animate">
+            <h3 class="h3">2-Octave Keypad Synth</h3>
+            <p class="des animate slide-left">
+              The 2-Octave Keypad Synth is an interactive Arduino-based project
+              that transforms a 4x4 keypad into an instrument capable of playing
+              two octaves.
+            </p>
+            <button
+              data-project="octave"
+              title="see more"
+              type="button"
+              class="project-see-less"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+
+          <div class="web-streaming animate">
+            <h3 class="h3">Music Streaming Web App</h3>
+            <p class="des animate slide-left">
+              An in-progress music streaming web app built with Node.js,
+              Express, and MySQL. Supports sign up, login, browsing songs and
+              recently played tracking.
+            </p>
+            <button
+              data-project="web-streaming"
+              title="see more"
+              type="button"
+              class="project-see-less"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-label="Contact">
+        <h1>Contact <span class="me">Me!</span></h1>
+
+        <form id="contactForm" name="contact">
+          <p class="form-p">
+            <label for="username" class="sr-only">Your name</label>
+            <input
+              id="username"
+              name="username"
+              placeholder="Your Name"
+              type="text"
+              required
+            />
+            <label for="email" class="sr-only">Your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </p>
+
+          <p class="form-p">
+            <label for="phone" class="sr-only">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              placeholder="Phone Number (optional)"
+              type="tel"
+            />
+            <label for="subject" class="sr-only">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Email Subject"
+              required
+            />
+          </p>
+
+          <p class="form-p">
+            <label for="message" class="sr-only">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+            ></textarea>
+          </p>
+
+          <p class="form-p">
+            <button type="submit" class="send-btn">
+              Send <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </p>
+        </form>
+
+        <p id="form-feedback" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer role="contentinfo" style="text-align: center; padding: 2rem 0">
+      © Blessings Chaleka
+    </footer>
+
+    <!-- Small inline script: unobtrusive form handler that won't break if /api/contact missing -->
+    <script>
+      (function () {
+        const form = document.getElementById("contactForm");
+        const feedback = document.getElementById("form-feedback");
+
+        form &&
+          form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            feedback.textContent = "sending...";
+
+            const data = {
+              name: form.username.value || "",
+              phone: form.phone.value || "N/A",
+              email: form.email.value || "",
+              subject: form.subject.value || "",
+              message: form.message.value || "",
+            };
+
+            try {
+              const resp = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+              });
+
+              if (resp.ok) {
+                feedback.textContent = "Thank you! your message has been sent";
+                form.reset();
+              } else {
+                const text = await resp.text().catch(() => "Server error");
+                feedback.textContent = "Something went wrong: " + text;
+              }
+            } catch (err) {
+              feedback.textContent =
+                "A network error occurred. Please try again.";
+              console.error(err);
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>
