@@ -82,7 +82,7 @@ function projecter(project, purpose = "view") {
 }
 
 // ===== Contact Form - Submit Handler =====
-function formHandler() {
+async function formHandler() {
   const responseMessage = document.getElementById("form-feedback");
   const form = document.forms.contact;
   const username = form.username.value;
@@ -95,16 +95,16 @@ function formHandler() {
   // Prepare form data
   const data = {
     name: username,
-    phone: phonenumber,
     email: email,
     subject: subject,
+    phone: phonenumber,
     message: message,
+    access_key: "ff1eb4c3-e4d5-4515-83c5-164ebfef89ec",
   };
   console.log(data);
-
   // Send form data to backend
   try {
-    const response = fetch("/api/contact", {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -112,12 +112,13 @@ function formHandler() {
       body: JSON.stringify(data),
     });
 
-    const responseData = response.json();
+    const responseData = await response.json();
 
     if (response.ok) {
       responseMessage.textContent = "Thank you! your message has been sent";
       form.reset();
     } else {
+      console.log(responseData);
       responseMessage.textContent = "Something went wrong.";
     }
   } catch (err) {
