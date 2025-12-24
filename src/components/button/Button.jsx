@@ -9,6 +9,14 @@ const Button = (props) => {
         </button>
       </>
     );
+  } else if (type === "button") {
+    return (
+      <>
+        <button className="bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold text-white h-11 text-center rounded-lg hover:bg-slate-200">
+          {props.textValue}
+        </button>
+      </>
+    );
   }
 };
 

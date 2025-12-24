@@ -8,7 +8,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="flex space-x-6 flex-row m-0 h-16 w-full border border-slate-700 fixed">
+      <div className="flex space-x-6 flex-row m-0 h-16 w-full border border-slate-700 static">
         <h1 className="flex items-center w-2/6 text-textColor text-2xl m-0 p-4  font-bold">
           BLESSINGS CHALEKA
         </h1>
