@@ -11,8 +11,10 @@ class App extends Component {
     return (
       <div className="relative space-y-1 flex flex-col flex-start w-full h-full">
         <Navbar />
-        <Home />
-        <About />
+        <div className="flex flex-col space-y-1 static">
+          <Home />
+          <About />
+        </div>
       </div>
     );
   }
