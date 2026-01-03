@@ -5,6 +5,7 @@ import "../fontawesome-free-6.7.2-web/css/all.min.css";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/home";
 import About from "./components/about/About";
+import Skill from "./components/Skill/Skill";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <div className="flex flex-col space-y-1 static">
           <Home />
           <About />
+          <Skill />
         </div>
       </div>
     );

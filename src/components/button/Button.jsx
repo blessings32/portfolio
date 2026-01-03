@@ -10,10 +10,14 @@ const Button = (props) => {
       </>
     );
   } else if (type === "button") {
+    let style = props.className || "";
+    let icon = props.icon || "";
+    style +=
+      " bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold text-white h-11 text-center rounded-lg hover:bg-slate-200 ";
     return (
       <>
-        <button className="bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold text-white h-11 text-center rounded-lg hover:bg-slate-200">
-          {props.textValue}
+        <button className={style}>
+          {props.textValue} {icon}
         </button>
       </>
     );
