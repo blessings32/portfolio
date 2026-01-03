@@ -30,7 +30,7 @@ class About extends Component {
 
           <div className="w-7/12  p-8 space-5">
             <img
-              src="/public/IMG-20250120-WA0032.jpg"
+              src="/assets/IMG-20250120-WA0032.jpg"
               className="float-right w-6/12 h-72 object-cover rounded-lg"
             />
 
