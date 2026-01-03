@@ -14,7 +14,7 @@ const Home = () => {
         {/* <div className="absolute insert-[1px] rounded-lg bg-black w-f"></div> */}
         {/* Profile image positioned in the center with rounded corners */}
         <img
-          src="/src/assets/IMG-20250902-WA0041.jpg"
+          src="/public/IMG-20250902-WA0041.jpg"
           className="absolute left-1 top-1 h-[calc(100%-12px)] w-[calc(100%-12px)] object-cover  rounded-full "
         />
       </div>
