@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/home";
 import About from "./components/about/About";
 import Skill from "./components/Skill/Skill";
+import ModuleCovered from "./components/modules/moduleCovered";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Home />
           <About />
           <Skill />
+          <ModuleCovered />
         </div>
       </div>
     );

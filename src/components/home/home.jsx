@@ -5,7 +5,7 @@ import Button from "../button/Button";
 const Home = () => {
   // border-8 border-l-primary-500 border-t-primary-900 border-r-secondary-800 border-b-accent-900
   return (
-    <div className="p-14 mt-16  w-full h-[calc(100vh-4rem)]">
+    <div className="p-6 mt-16  w-full h-[calc(100vh-4rem)]">
       {/* Main container with padding and full width/height */}
       {/* Image container with animated gradient background */}
       <div className=" relative overflow-hidden  mt-16 float-right w-96 h-96 ">
