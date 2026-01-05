@@ -4,7 +4,10 @@ const Button = (props) => {
   if (type === "navLink") {
     return (
       <>
-        <button className="flex font-semibold w-64 justify-center items-center text-lg text-textColor m-0 p-0 hover:border-b-4 hover:border-b-[#acbd0f] hover:bg-slate-900">
+        <button
+          onClick={props.onClick}
+          className="px-4 py-2 text-textColor-100 hover:text-accent-400 transition-colors duration-200 whitespace-nowrap text-sm sm:text-base"
+        >
           {props.textValue}
         </button>
       </>

@@ -7,17 +7,21 @@ import Home from "./components/home/home";
 import About from "./components/about/About";
 import Skill from "./components/Skill/Skill";
 import ModuleCovered from "./components/modules/moduleCovered";
+import Projects from "./components/projects/Projects";
+import Education from "./components/education/Education";
 
 class App extends Component {
   render() {
     return (
-      <div className="relative space-y-1 flex flex-col flex-start w-full h-full">
+      <div className="relative space-y-1 flex flex-col flex-start w-full h-full poppins-regular">
         <Navbar />
         <div className="flex flex-col space-y-1 static">
           <Home />
           <About />
           <Skill />
           <ModuleCovered />
+          <Projects />
+          <Education />
         </div>
       </div>
     );

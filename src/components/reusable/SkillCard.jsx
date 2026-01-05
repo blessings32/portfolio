@@ -1,48 +1,5 @@
-const data = [
-  {
-    title: "Software & Web Development",
-    level: 8,
-    skills: [
-      "JavaScript (ES6+)",
-      "React.js (Hooks, JSK, State)",
-      "HTML5, CSS3, Tailwindcss",
-      "Git & GitHub",
-      "Node.js, Express.js",
-      "Database Management (MySQL)",
-    ],
-  },
-  {
-    title: "Embedded Systems & IoT",
-    level: 6.5,
-    skills: [
-      "Arduino Programming",
-      "Sensor & actuators",
-      "Digital / Analog I/O",
-      "Hardware-software integration",
-      "Proteus & LTspice (simulation/testing)",
-    ],
-  },
-  {
-    title: "Electrical & microcontroller Systems",
-    level: 7,
-    skills: [
-      "Circuit fundamentals (AC/DC)",
-      "Interfacing sensors & actuators with microcontrollers",
-      "Troubleshooting & debugging simple circuits",
-    ],
-  },
-  {
-    title: "Systems Thinking & Problem Solving",
-    level: 8,
-    skills: [
-      "End-to-end system design(hardware + software)",
-      "Debugging across layers",
-      "user-centered design approach",
-      "Critical thinking and evaluation",
-    ],
-  },
-];
-export default function SkillCard() {
+export default function SkillCard(props) {
+  const { data } = props;
   return (
     <>
       {data.map((category, index) => (

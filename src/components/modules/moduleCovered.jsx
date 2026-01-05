@@ -49,18 +49,22 @@ const modules = [
 
 function ModuleCovered() {
   return (
-    <div className="pt-6 pl-14 w-full h-auto">
-      <Title className="w-72" text="Relevant Module Covered" />
+    <div className="pt-6 px-4 md:pl-14 w-full h-auto">
+      <Title className="w-full md:w-72" text="Relevant Module Covered" />
 
-      <div className="grid  grid-cols-3 gap-4 mt-10 text-left pr-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 text-left w-full md:w-[calc(100%-20px)] pr-0 md:pr-5">
         {modules.map((module, index) => {
           return (
             <div
               key={index}
-              className="h-30 border-l-4 border-accent-700 bg-slate-900 rounded-md  p-5 shadow-sm shadow-slate-800"
+              className="min-h-32 transition-all hover:translate-y-2 duration-300 cursor-pointer border-l-4 border-accent-600 bg-slate-900 rounded-md p-5 shadow-sm shadow-slate-800 hover:border-accent-700"
             >
-              <h2 className="text-xl font-bold">{module.title}</h2>
-              <p className="text-textColor-400">{module.description}</p>
+              <h2 className="text-lg md:text-xl font-bold text-textColor-100">
+                {module.title}
+              </h2>
+              <p className="text-textColor-400 text-sm md:text-base mt-2">
+                {module.description}
+              </p>
             </div>
           );
         })}

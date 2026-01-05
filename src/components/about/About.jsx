@@ -5,10 +5,11 @@ import Title from "../reusable/title";
 class About extends Component {
   render() {
     return (
-      <div className="pt-24 pl-14 w-full h-screen">
+      <div className="pt-6 md:pt-24 px-4 md:pl-14 w-full min-h-screen flex flex-col">
         <Title text="About Me" />
-        <div className="mt-7 flex flex-row gap-5  h-[calc(100%-80px)] ">
-          <div className="text-xl h-full text-left w-5/12 text-textColor-300 pt-10 relative">
+        <div className="mt-6 md:mt-7 flex flex-col md:flex-row gap-6 md:gap-5 flex-1">
+          {/* Text content section */}
+          <div className="text-base md:text-xl text-left w-full md:w-5/12 text-textColor-300 md:pt-10 relative">
             Sustainable Energy Engineering student with strong skills in web
             development, databases, and embedded systems. I build smart,
             data-driven energy and IoT solutions using technologies like
@@ -18,7 +19,7 @@ class About extends Component {
             My work focuses on bridging hardware and software to support
             renewable energy innovation and sustainable infrastructure in
             Africa.
-            <div className="bottom-20 absolute w-full p-8 pl-0">
+            <div className="mt-8 md:mt-0 md:absolute md:bottom-20 w-full pr-4 md:pr-0">
               <Button
                 icon={<i className="fa-solid fa-download"></i>}
                 className="w-full"
@@ -28,29 +29,43 @@ class About extends Component {
             </div>
           </div>
 
-          <div className="w-7/12  p-8 space-5">
+          {/* Image and stats section */}
+          <div className="w-full md:w-7/12 p-0 md:p-8">
             <img
               src="/assets/IMG-20250120-WA0032.jpg"
-              className="float-right w-6/12 h-72 object-cover rounded-lg"
+              className="w-full md:float-right md:w-6/12 md:h-72 h-64 object-cover rounded-lg mb-6 md:mb-0"
             />
 
-            <div className="flex-col bg-slate-900 w-5/12 p-2 h-24 min-w-5/12 overflow-hidden   border border-slate-700 rounded-md hover:bg-slate-800 mb-8 mt-48">
-              <h3 className="font-bold text-left">Education</h3>
-              <p className="text-textColor-400 text-left">
-                BEng in Sustainable Energy Engineering
-                <br />
-                ... 2019
-              </p>
-            </div>
-            <div className="flex flex-row space-x-16">
-              <div className="flex-col bg-slate-900 w-5/12 p-2 h-24  border border-slate-700 rounded-md hover:bg-slate-800 mb-8">
-                <h3 className="font-bold text-left">Projects</h3>
-                <p className="text-textColor-400 text-left">4 complited</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 md:space-y-6 md:mt-48">
+              <div className="md:col-span-1 bg-slate-900 w-full p-4 min-h-24 border border-slate-700 rounded-md hover:border-primary-600 hover:bg-slate-800 transition-colors">
+                <h3 className="font-bold text-left text-textColor-100">
+                  Education
+                </h3>
+                <p className="text-textColor-400 text-left text-sm md:text-base">
+                  BEng in Sustainable Energy Engineering
+                  <br />
+                  ... 2029
+                </p>
               </div>
 
-              <div className="flex-col bg-slate-900 w-6/12 p-2 h-24  border border-slate-700 rounded-md hover:bg-slate-800">
-                <h3 className="font-bold text-left">Awards & Certificate</h3>
-                <p className="text-textColor-400 text-left">5 Recognitions</p>
+              <div className="flex flex-col md:flex-row gap-4 col-span-full md:col-span-2 md:space-x-6 md:space-y-0">
+                <div className="bg-slate-900 w-full md:w-5/12 p-4 min-h-24 border border-slate-700 rounded-md hover:border-primary-600 hover:bg-slate-800 transition-colors">
+                  <h3 className="font-bold text-left text-textColor-100">
+                    Projects
+                  </h3>
+                  <p className="text-textColor-400 text-left text-sm md:text-base">
+                    4 completed
+                  </p>
+                </div>
+
+                <div className="bg-slate-900 w-full md:w-6/12 p-4 min-h-24 border border-slate-700 rounded-md hover:border-primary-600 hover:bg-slate-800 transition-colors">
+                  <h3 className="font-bold text-left text-textColor-100">
+                    Awards & Certificate
+                  </h3>
+                  <p className="text-textColor-400 text-left text-sm md:text-base">
+                    5 Recognitions
+                  </p>
+                </div>
               </div>
             </div>
           </div>

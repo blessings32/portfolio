@@ -3,6 +3,13 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      screens: {
+        sm: "480px", // small devices / phones
+        md: "768px", // tablets
+        lg: "1024px", // laptops / small desktops
+        xl: "1280px", // large desktops
+        "2xl": "1536px", // extra large screens
+      },
       colors: {
         textColor: {
           50: "#ffffff",
