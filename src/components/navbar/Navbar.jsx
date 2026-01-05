@@ -1,4 +1,3 @@
-import React from "react";
 import { Component } from "react";
 import Button from "../button/Button";
 
@@ -39,10 +38,10 @@ class Navbar extends Component {
 
     return (
       <>
-        <div className="z-50 fixed top-0 left-0 w-full h-16 border-b border-slate-700 bg-background-950">
+        <div className="z-50 fixed top-0 left-0 w-full h-16 border-b border-slate-700 bg-transparent backdrop-blur-md shadow-md">
           <div className="flex justify-between items-center h-full px-4 gap-4">
             <h1 className="text-textColor-100 text-xl font-bold whitespace-nowrap">
-              BC
+              BLESSINGS CHALEKA
             </h1>
 
             <div className="hidden lg:flex gap-2 items-center flex-1 justify-end">
@@ -100,3 +99,5 @@ class Navbar extends Component {
     );
   }
 }
+
+export default Navbar;
