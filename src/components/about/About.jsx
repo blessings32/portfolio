@@ -51,7 +51,7 @@ class About extends Component {
             renewable energy innovation and sustainable infrastructure in
             Africa.
             <div className="mt-8 md:mt-0 md:absolute md:bottom-20 w-full pr-4 md:pr-0">
-              <Button
+              <Button href="/docs/cv/CV.pdf"
                 icon={<i className="fa-solid fa-download"></i>}
                 className="w-full"
                 type="button"
