@@ -61,7 +61,7 @@ const Home = () => {
           >
             <i className="fa-brands fa-facebook"></i>{" "}
           </a>
-          {/* GitHub link */}
+          
           <a
             className="hover:text-slate-300 transition-colors"
             title="github"

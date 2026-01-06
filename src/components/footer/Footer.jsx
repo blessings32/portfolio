@@ -43,12 +43,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h4 className="text-textColor-100 font-semibold mb-4 text-base md:text-lg">
               Quick Links
             </h4>
-            <nav className="space-y-2">
+            <nav className=" space-y-2">
               <a
                 href="#home"
                 className="text-textColor-400 hover:text-primary-400 transition duration-200 text-sm md:text-base block"

@@ -23,7 +23,7 @@ const Button = (props) => {
     let style = props.className || "";
     let icon = props.icon || "";
     style +=
-      " bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold hover:text-black text-white h-11 text-center rounded-lg hover:bg-slate-200 ";
+      " bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold hover:text-black text-white h-11 text-center rounded-lg hover:bg-slate-200";
     return (
       <>
         <a href={props.href} className={style}>
