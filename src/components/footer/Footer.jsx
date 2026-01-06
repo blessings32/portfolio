@@ -5,22 +5,22 @@ export default function Footer() {
     {
       label: "GitHub",
       icon: "fa-github",
-      url: "https://github.com",
+      url: "https://github.com/blessings32",
     },
     {
       label: "LinkedIn",
       icon: "fa-linkedin",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/blessings-chaleka-226196262",
     },
     {
-      label: "Twitter",
-      icon: "fa-twitter",
-      url: "https://twitter.com",
+      label: "Facebook",
+      icon: "fa-facebook",
+      url: "https://www.facebook.com/chaleka32",
     },
     {
-      label: "Email",
-      icon: "fa-envelope",
-      url: "mailto:your.email@example.com",
+      label: "Instagram",
+      icon: "fa-instagram",
+      url: "https://www.instagram.com/chaleka32",
     },
   ];
 

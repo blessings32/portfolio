@@ -5,7 +5,7 @@ export default function SkillCard(props) {
       {data.map((category, index) => (
         <div
           key={index}
-          className="leading-relaxed h-80 bg-slate-900 border border-slate-700 rounded-md hover:bg-slate-950 text-left p-5"
+          className="leading-relaxed h-96 bg-slate-900 border border-slate-700 rounded-md hover:bg-slate-950 text-left p-5"
         >
           <h1 className="text-xl mb-4">
             <i
