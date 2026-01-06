@@ -7,7 +7,12 @@ export default function SkillCard(props) {
           key={index}
           className="leading-relaxed h-80 bg-slate-900 border border-slate-700 rounded-md hover:bg-slate-950 text-left p-5"
         >
-          <h1 className="text-xl mb-4">{category.title}</h1>
+          <h1 className="text-xl mb-4">
+            <i
+              className={`${category.icon} mr-5 text-2xl text-secondary-400`}
+            ></i>
+            {category.title}
+          </h1>
           <div className="mb-4">
             <span className="text-sm text-textColor-600">
               Level: {category.level}/10

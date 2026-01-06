@@ -1,6 +1,6 @@
 import Button from "../button/Button";
 import Title from "../reusable/title";
-
+import { useAppearOnScroll } from "../../hooks/useAppearOnScroll";
 const projects = [
   {
     title: "Smart Home system",
@@ -34,8 +34,15 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { ref, visible } = useAppearOnScroll(0.4);
   return (
-    <div className="pt-6 px-4 md:pl-14 w-full h-max">
+    <div
+      ref={ref}
+      id="projects"
+      className={`scroll-mt-14 ${
+        visible ? "animate-appear" : "opacity-0 scale-50"
+      } pt-6 px-4 md:pl-14 w-full h-max`}
+    >
       <Title text="Featured Projects" className="w-max" />
       <p className="text-left text-textColor-400 mt-6 text-base md:text-lg">
         A showcase of my recent works, highlighting my skills in software, web

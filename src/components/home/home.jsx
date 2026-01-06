@@ -5,7 +5,10 @@ import Button from "../button/Button";
 const Home = () => {
   // border-8 border-l-primary-500 border-t-primary-900 border-r-secondary-800 border-b-accent-900
   return (
-    <div className="p-4 md:p-6 mt-8 md:mt-16 w-full min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-center md:items-center gap-8">
+    <div
+      id="home"
+      className="p-4 md:p-6 mt-8 md:mt-16 w-full min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-center md:items-center gap-8"
+    >
       {/* Main container with padding and full width/height */}
       {/* Image container with animated gradient background */}
       <div className="relative overflow-hidden mx-auto md:mx-0 md:float-right w-64 h-64 md:w-96 md:h-96 flex-shrink-0">
@@ -33,7 +36,7 @@ const Home = () => {
           and Technology
         </span>
         {/* Social media links container */}
-        <div className="flex flex-row gap-6 md:gap-7 mt-6 md:mt-8 text-xl md:text-2xl">
+        <div className="flex flex-row gap-6 md:gap-7 mt-6 mb-7 md:mt-8 text-xl md:text-2xl">
           {/* LinkedIn link */}
           <a
             className="hover:text-primary-400 transition-colors"
@@ -69,7 +72,12 @@ const Home = () => {
           <br />
           {/*  */}
         </div>
-        <Button className="mt-6 md:mt-8" type="button" textValue="See More>" />
+        <a
+          className="mt-4 md:mt-8 bg-secondary-500  text-xl p-2 w-36 font-semibold  text-white h-11 text-center rounded-lg hover:bg-secondary-800"
+          href="#about"
+        >
+          See More
+        </a>
       </div>
     </div>
   );

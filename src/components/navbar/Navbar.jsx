@@ -34,6 +34,7 @@ class Navbar extends Component {
       { name: "Projects", id: "projects" },
       { name: "Education", id: "education" },
       { name: "Awards & honors", id: "awards" },
+      { name: "Contact", id: "contact" },
     ];
 
     return (

@@ -1,6 +1,8 @@
 import Title from "../reusable/title";
-
+import { useAppearOnScroll } from "../../hooks/useAppearOnScroll";
 export default function Education() {
+  const { ref, visible } = useAppearOnScroll(0.4);
+
   const educationData = [
     {
       year: "2022",
@@ -15,7 +17,13 @@ export default function Education() {
   ];
 
   return (
-    <div className="pt-6 pl-14 w-full h-max">
+    <div
+      id="education"
+      className={` scroll-mt-14 ${
+        visible ? "animate-appear" : "opacity-0 scale-50"
+      } pt-6 pl-14 w-full h-max`}
+      ref={ref}
+    >
       <Title text="Education" className="w-max" />
       <p className="text-left text-textColor-400 mt-6 text-lg">
         A timeline of my academic journey and educational milestones.

@@ -77,6 +77,15 @@ export default {
           950: "#272f04",
         },
       },
+      keyframes: {
+        appear: {
+          "0%": { opacity: 0, transform: "translateY(100px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        appear: "appear 0.6s linear forwards",
+      },
     },
   },
   plugins: [],

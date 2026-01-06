@@ -1,4 +1,5 @@
 import Title from "../reusable/title";
+import { useAppearOnScroll } from "../../hooks/useAppearOnScroll";
 const modules = [
   {
     title: "Engineering Drawing",
@@ -48,9 +49,16 @@ const modules = [
 ];
 
 function ModuleCovered() {
+  const { ref, visible } = useAppearOnScroll(0.4);
   return (
-    <div className="pt-6 px-4 md:pl-14 w-full h-auto">
-      <Title className="w-full md:w-72" text="Relevant Module Covered" />
+    <div
+      ref={ref}
+      id="coursework"
+      className={`scroll-mt-14 ${
+        visible ? "animate-appear" : "opacity-0 scale-50"
+      } pt-6 px-4 md:pl-14 w-full h-auto`}
+    >
+      <Title className="w-full md:w-max" text="Relevant Module Covered" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 text-left w-full md:w-[calc(100%-20px)] pr-0 md:pr-5">
         {modules.map((module, index) => {
