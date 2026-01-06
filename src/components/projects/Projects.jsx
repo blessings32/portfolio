@@ -4,6 +4,7 @@ import { useAppearOnScroll } from "../../hooks/useAppearOnScroll";
 const projects = [
   {
     title: "Smart Home system",
+    viewPojeject: "https://www.linkedin.com/posts/blessings-chaleka-226196262_arduino-smarthome-engineeringstudent-activity-7345145527962931201-dTTq",
     description:
       "A smart home system using RFID for automatic door access and a photoresistor to switch on security at night and off during the day.",
     technologies: ["Arduino", "RFID", "Photoresistor", "Arduino C"],
@@ -11,13 +12,15 @@ const projects = [
   },
   {
     title: "Environmental Monitoring System",
+    viewPojeject: "https://www.instagram.com/reel/DTM3ZXdDV29/",
     description:
       "Uses a DHT sensor to display real-time temperature and humidity on an LCD and triggers a buzzer when the temperature goes above 37°C.",
     technologies: ["Arduino", "DHT Sensor", "LCD", "Buzzer", "Arduino C"],
-    image: "/assets/e1.jpg",
+    image: "/assets/e1.jpg"
   },
   {
     title: "Music Streaming Web App",
+    viewPojeject: "https://www.linkedin.com/posts/blessings-chaleka-226196262_nodejs-backenddev-mysql-activity-7346799450675105795-TFoJ",
     description:
       "A web application that allows users to sign up, log in, and browse songs, artists, and albums. The app also tracks recently played songs for each user, providing a personalized listening experience.",
     technologies: [
@@ -74,15 +77,17 @@ export default function Projects() {
                 >
                   {tech}
                 </span>
-              ))}
+		    ))}
             </div>
-
-            <Button
+		
+            <Button href={project.viewPojeject}
               className="mt-auto ml-4 mb-4 w-[calc(100%-32px)]"
               type="button"
               textValue="View Project"
             />
+	
           </div>
+	    
         ))}
       </div>
     </div>

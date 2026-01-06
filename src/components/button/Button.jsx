@@ -26,9 +26,9 @@ const Button = (props) => {
       " bg-secondary-500 mt-7 text-xl p-2 w-36 font-semibold hover:text-black text-white h-11 text-center rounded-lg hover:bg-slate-200 ";
     return (
       <>
-        <button className={style}>
+        <a href={props.href} className={style}>
           {props.textValue} {icon}
-        </button>
+        </a>
       </>
     );
   }
