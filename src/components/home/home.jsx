@@ -13,7 +13,7 @@ const Home = () => {
       {/* Image container with animated gradient background */}
       <div className="relative overflow-hidden mx-auto md:mx-0 md:float-right w-64 h-64 md:w-96 md:h-96 flex-shrink-0">
         {/* Animated gradient circular background */}
-        <div className="absolute inset-0 rounded-full animate-spin bg-[conic-gradient(from_0deg,#4054ff,#060d91,#471dba,#4a5512)] h-full w-full"></div>
+        <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,#4054ff,#060d91,#471dba,#4a5512)] h-full w-full"></div>
         {/* <div className="absolute insert-[1px] rounded-lg bg-black w-f"></div> */}
         {/* Profile image positioned in the center with rounded corners */}
         <img
@@ -61,7 +61,7 @@ const Home = () => {
           >
             <i className="fa-brands fa-facebook"></i>{" "}
           </a>
-          
+
           <a
             className="hover:text-slate-300 transition-colors"
             title="github"
