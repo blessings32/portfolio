@@ -1,16 +1,37 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS. Showcase your skills, projects, education, and certifications with an elegant and interactive design.
 
-Currently, two official plugins are available:
+## 🎨 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Mobile-first approach using Tailwind CSS
+- **Smooth Animations** - Scroll-triggered animations for engaging user experience
+- **Dark-Friendly UI** - Modern aesthetic with FontAwesome icons
+- **Fast Performance** - Built with Vite for optimal load times
+- **Component-Based Architecture** - Modular and maintainable React components
+- **Interactive Sections**:
+  - Home/Hero section
+  - About Me
+  - Skills showcase
+  - Modules/Technologies covered
+  - Projects portfolio
+  - Education history
+  - Certifications
+  - Contact information
+  - Footer
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 16+
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd portfolio
+```
