@@ -32,6 +32,6 @@ A modern, responsive personal portfolio website built with React, Vite, and Tail
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/blessings32/portfolio.git
 cd portfolio
 ```
