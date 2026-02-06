@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
-Sitemap:
-https://blessings-chaleka.vercel.app/sitemap.xml
+
+# Disallow build/dev files
+Disallow: /node_modules/
+Disallow: /*.json$
+
+Sitemap: https://blessings-chaleka.vercel.app/sitemap.xml
